@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import static java.lang.Math.PI;
 
 /**
@@ -29,5 +31,25 @@ public class Desafio16FuncionesJava {
         double perim = 2 * base + 2 * altura;
         return perim;
     }
+    static double ingresoNumeros (){
+        Scanner miTeclado;
+        miTeclado = new Scanner(System.in);
+        System.out.println("Ingrese un número: ");
+        return miTeclado.nextInt();
+    }
+    static void impresionNumeros(){
+        System.out.println(ingresoNumeros());
+    }
+    static void impresionString(String frase){
+        System.out.println(frase);
+    }
 
+    public static void main(String[] args) {
+        System.out.println(superficieCirculo(5));
+        System.out.println(perimetroCirculo(5));
+        System.out.println(superficieRectangulo(4, 5));
+        System.out.println(perimetroRectangulo(4, 5));
+        impresionNumeros();
+        impresionString("Hola mundo");
+    }
 }
