@@ -53,10 +53,10 @@ public class Desafio17FuncionesJava {
         opcion = miTeclado.nextInt();
         miTeclado.nextLine();
         switch (opcion){
-            case opcion == 1:
+            case 1:
             System.out.println(notas);
             break;
-            case opcion == 2:
+            case 2:
             System.out.println(promedioNotas(notas));
             break;
         }
