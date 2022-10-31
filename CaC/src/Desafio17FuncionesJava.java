@@ -47,19 +47,33 @@ public class Desafio17FuncionesJava {
         System.out.println("##### Ingresando y promediando notas ####");
         notas = ingresoNotas();
         System.out.println("##### Menu ####");
-        System.out.println("1.Visualizar los datos cargados");
-        System.out.println("2.Obtener el promedio");
+        System.out.println("1. Visualizar los datos cargados");
+        System.out.println("2. Obtener el promedio");
+        System.out.println("3. Salir");
         System.out.println("Elegí la opción deseada: ");
         opcion = miTeclado.nextInt();
         miTeclado.nextLine();
-        switch (opcion){
-            case 1:
-            System.out.println(notas);
-            break;
-            case 2:
-            System.out.println(promedioNotas(notas));
-            break;
+
+        while (opcion!=3){
+            switch (opcion) {
+                case 1:
+                    System.out.println(notas);
+                    break;
+                case 2:
+                    System.out.println(promedioNotas(notas));
+                    break;
+            }
+            System.out.println("##### Menu ####");
+            System.out.println("1. Visualizar los datos cargados");
+            System.out.println("2. Obtener el promedio");
+            System.out.println("3. Salir");
+            System.out.println("Elegí la opción deseada: ");
+            opcion = miTeclado.nextInt();
+            miTeclado.nextLine();
         }
+
+
+
 
     }
 }
