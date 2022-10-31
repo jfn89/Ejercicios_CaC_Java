@@ -6,6 +6,12 @@ import java.util.Scanner;
  * Desafío 1
  * a-Realizar un arraylist donde mediante una función cargarNotas se puedan cargar los datos vía teclado.
  * b-Programar una función que arroje el promedio de las notas cargadas.
+ * Desafío 2
+ * Colocar la función cargaNotas dentro de un bucle while que pregunte si deseo cargar otro dato.
+ * Desafío 3
+ * Colocar toda la estructura anterior dentro de un switch cuyos menúes sean:
+ * 1.Visualizar los datos cargados
+ * 2.Obtener el promedio
  * {@code @author:} Juliana Novo
  */
 public class Desafio17FuncionesJava {
@@ -34,6 +40,26 @@ public class Desafio17FuncionesJava {
     }
 
     public static void main(String[] args) {
-        System.out.println(promedioNotas(ingresoNotas()));
+        Scanner miTeclado;
+        ArrayList <Double> notas = new ArrayList<Double>();
+        miTeclado = new Scanner(System.in);
+        int opcion = 0;
+        System.out.println("##### Ingresando y promediando notas ####");
+        notas = ingresoNotas();
+        System.out.println("##### Menu ####");
+        System.out.println("1.Visualizar los datos cargados");
+        System.out.println("2.Obtener el promedio");
+        System.out.println("Elegí la opción deseada: ");
+        opcion = miTeclado.nextInt();
+        miTeclado.nextLine();
+        switch (opcion){
+            case opcion == 1:
+            System.out.println(notas);
+            break;
+            case opcion == 2:
+            System.out.println(promedioNotas(notas));
+            break;
+        }
+
     }
 }
